@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs"); %>
+
+<h1>Compose</h1>
+<form action="/compose" method="post">
+<label for="post_title">Title</label><br>
+<input class="form-control" type="text"  name="postTitle" placeholder="Title">
+
+
+<br><label for="text_input" style="margin-top:1rem">Post</label><br>
+
+<!-- below we have to type css code of resize:vertical to stop text area from being able to be resized horizontally as it breaks the page -->
+<textarea style="resize:vertical;" class="form-control" id="exampleFormControlTextarea1" rows="3" name="postBody" placeholder="Enter your text here..."></textarea>
+<!-- <input class="form-control" type="text" name="text_input" placeholder="Enter your text here..."><br> -->
+
+
+<button class="btn btn-primary" type="submit" style="margin-top:1rem">Publish</button>
+</form>
+<%- include("partials/footer.ejs") %>
