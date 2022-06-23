@@ -1,6 +1,7 @@
 <%- include('partials/header.ejs'); %>
 
 
+
 <% if (posts.length === 0 ) { %>
   <h1>Home</h1>
   <p>There is nothing new to show to your right now! Check again later or after composing your own post! </p>
@@ -11,7 +12,7 @@
 <%  for (var i = 0; i <posts.length; i++) { %>
 <div class="post">
     <h1> <%= posts[i].title  %></h1>
-    <p><%= posts[i].body %>
+    <p><%= posts[i].body.slice(0,100) + "..." %>
 </div>
 <%  } %>
 
