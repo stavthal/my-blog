@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 
 //Global variable/array that stores all the posts
-var posts = [];
+let posts = [];
 
 
 
@@ -59,19 +59,6 @@ app.post("/compose", (req, res) => {
 
     res.redirect("/");
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
