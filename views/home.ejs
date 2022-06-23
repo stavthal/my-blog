@@ -12,7 +12,11 @@
 <%  for (var i = 0; i <posts.length; i++) { %>
 <div class="post">
     <h1> <%= posts[i].title  %></h1>
+    <% if (posts[i].body.length > 99) { %>
     <p><%= posts[i].body.slice(0,100) + "..." %>
+  <% }  else { %>
+    <p><%= posts[i].body %>
+  <% } %>
 </div>
 <%  } %>
 
