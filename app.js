@@ -54,12 +54,12 @@ app.get("/posts/:postName", (req, res) => { //req.params."NAME" must be the same
 
     if (storedTitle === requestedTitle) {
        res.render("post", {title: post.title , body: post.body})
-       console.log("Match found");
 
     }
   })
 
   });
+
 
 
 
